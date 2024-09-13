@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Repeat Recommendation Remover",
+  "version": "1.0",
+  "description": "Extension that removes repeated youtube recommendations",
+  "icons": {
+    "48": "icons/icon.jpg"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "https://www.youtube.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/icon.jpg"
+    },
+    "default_title": "Clear Seen Videos"
+  }
+}

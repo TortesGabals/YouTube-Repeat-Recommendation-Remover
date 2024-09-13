@@ -1,0 +1,1 @@
+This extension blocks youtube from recommending the same video twice, it can be reset by running the extension through the extension toolbar.
